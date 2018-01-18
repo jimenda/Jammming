@@ -1,12 +1,27 @@
 import React from "react";
 import "./searchresults.css";
+import TrackList from "../tracklist/tracklist";
+
+const track = {
+  name: 'Pour Some Sugar On Me',
+  artist: 'Def Leppard',
+  album: 'Hysteria'
+};
+
+const tracks = [
+  track,
+  track,
+  track
+];
 
 class SearchResults extends React.Component {
   render() {
-    <div className="SearchResults">
-      <h2>Results</h2>
-      <TrackList component />
-    </div>
+    return (
+      <div className="SearchResults">
+        <h2>Results</h2>
+        <TrackList tracks={this.props.searchResults}/>
+      </div>
+    )
   }
 };
 
