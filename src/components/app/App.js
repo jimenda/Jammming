@@ -60,18 +60,23 @@ class App extends React.Component {
       <div>
         <h1>Ja<span className="highlight">mmm</span>ing</h1>
         <div className="App">
+        console.log('debug1');
           <SearchBar onSearch={this.search} />
+          console.log('debug2');
           <div className="App-playlist">
+          console.log('debug3');
             <SearchResults
               searchResults={this.state.searchResults}
               onAdd={this.addTrack}
             />
+            console.log('debug4');
             <Playlist
               playlistName="My Playlist"
               playlistTracks={this.state.playlist}
               onRemove={this.removeTrack}
               onNameChange={this.updatePlaylistName}
             />
+            console.log('debug5');
           </div>
         </div>
       </div>
