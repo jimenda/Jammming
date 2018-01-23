@@ -15,20 +15,18 @@ class Track extends React.Component {
         <div className="track-information">
           <h3>{this.props.track.name}</h3>
           <p>{this.props.track.artist} | {this.props.track.album}</p>
-  //        <a className="Track-action">
-  //          + or - will go here
-  //        </a>
         </div>
+        {this.renderAction()}
       </div>
-    )
+    );
   }
 
-  addTrack(this.props.track) {
-    this.props.onAdd({this.props.track});
+  addTrack() {
+    this.props.onAdd(this.props.track);
   }
 
-  removeTrack(this.props.track) {
-    this.props.onRemove({this.props.track});
+  removeTrack() {
+    this.props.onRemove(this.props.track);
   }
 
   renderAction() {
@@ -36,7 +34,8 @@ class Track extends React.Component {
       return <a className = 'Track-action' onClick={this.removeTrack}>-</a>;
     } else {
       return <a className = 'Track-action' onClick={this.addTrack}>+</a>;
+    }
   }
-}
+};
 
 export default Track;

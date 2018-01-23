@@ -6,11 +6,11 @@ class Playlist extends React.Component {
   constructor(props) {
     super(props);
 
-    this.onNameChange=this.onNameChange.bind(this);
+    this.handleNameChange=this.handleNameChange.bind(this);
   }
 
   handleNameChange(defaultValue) {
-    onNameChange(defaultValue);
+    this.props.onNameChange(defaultValue);
   }
 
   render() {
