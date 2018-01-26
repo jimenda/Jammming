@@ -61,8 +61,7 @@ let Spotify = {
       method: 'POST',
       body: JSON.stringify({uris: uris})
     });
-  };
-  console.log('Playlist Saved')
+  }
 };
 
 export default Spotify;
