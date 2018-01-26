@@ -13,4 +13,6 @@ export class SearchResults extends React.Component {
   }
 }
 
+console.log('Search Results');
+
 export default SearchResults;

@@ -53,7 +53,10 @@ class App extends React.Component {
     Spotify.search(searchTerm).then(searchResult => {
       this.setState({searchResults: searchResult});
     });
+    console.log(this.state.searchResults);
   }
+
+
 
   render() {
     return (
@@ -62,10 +65,10 @@ class App extends React.Component {
         <div className="App">
           <SearchBar onSearch={this.search} />
           <div className="App-playlist">
-            <SearchResults
-              searchResults={this.state.searchResults}
-              onAdd={this.addTrack}
-            />
+            <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack}/>
+            {console.log('Playlist Track:')}
+            {console.log(this.state.searchResults)}
+            {console.log('End.')}
             <Playlist
               playlistName={this.state.playlistName}
               playlistTracks={this.state.playlist}

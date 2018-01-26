@@ -3,7 +3,7 @@ import './tracklist.css';
 
 import Track from '../track/track';
 
-let track = 'undefined';
+// let track = 'undefined';
 
 class TrackList extends React.Component {
   render() {

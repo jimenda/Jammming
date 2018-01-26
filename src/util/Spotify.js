@@ -28,6 +28,8 @@ let Spotify = {
     ).then(jsonResponse => {
       console.log(jsonResponse)
       if(!jsonResponse.tracks) {
+        return [];
+      }
       return jsonResponse.tracks.items.map(track => {
         return {
           id: track.id,
@@ -38,7 +40,7 @@ let Spotify = {
         }
       })
       }
-    });
+    );
   },
 
   savePlaylist(playlistName, trackURIs) {
